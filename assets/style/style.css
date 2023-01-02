@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500;1,700&display=swap");
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #469597, #5BA199, #BBC6C8, #DDBEAA);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+}
+body header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+body header #logo {
+  grid-area: 1/1/2/2;
+  align-items: center;
+  width: 70%;
+  height: auto;
+}
+body header h1 {
+  text-align: center;
+  grid-area: 1/2/2/3;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 10vw;
+  text-decoration: none;
+  position: relative;
+}
+body header h1:hover {
+  color: #000;
+  font-size: 10.5vw;
+  transition: 0.5s ease;
+}
+body header h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1.5vw;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+body header h1:hover::before {
+  transform: scaleX(1);
+}
+body header #add {
+  grid-area: 1/3/2/4;
+  background: none;
+  border: none;
+}
+body header #add #cross {
+  width: 12vw;
+  height: auto;
+  border-radius: 50%;
+}
+body header #add #cross:hover {
+  width: 11vw;
+  height: auto;
+  transition: 0.5s;
+  cursor: pointer;
+}
+body header #add #cross:active {
+  background-color: #467e77;
+}
+body main #chooseCity {
+  width: 30vw;
+  height: 4vw;
+  margin-left: 55%;
+  display: none;
+  font-family: "Josefin Sans", sans-serif;
+  background: rgba(255, 255, 255, 0.479);
+  font-size: 3vw;
+  border: solid #BBC6C8 0.5vw;
+}
+body main .weather {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+  border-radius: 30%;
+  border: solid #BBC6C8 1vw;
+  opacity: 0.8;
+  margin: 5%;
+  margin-bottom: 8%;
+  padding: 4%;
+  font-family: "Josefin Sans", sans-serif;
+}
+body main .weather .delete {
+  grid-area: 1/2/2/3;
+  width: 10vw;
+  height: 10vw;
+  position: relative;
+  left: 85%;
+  bottom: 25%;
+  background-color: #E5E3E4;
+  border-radius: 50%;
+  box-shadow: -13px 13px 15px 5px #000000;
+}
+body main .weather .delete:hover {
+  width: 11vw;
+  height: 11vw;
+  transition: 0.2s;
+  background-color: #BBC6C8;
+  cursor: pointer;
+}
+body main .weather .delete:active {
+  background-color: #949d9e;
+}
+body main .weather .delete .imgDelete {
+  width: 6vw;
+  height: 6vw;
+}
+body main .weather h2 {
+  grid-area: 1/1/2/2;
+  font-size: 8vw;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: -10%;
+}
+body main .weather h2:hover {
+  font-size: 8.5vw;
+  transition: 0.5s;
+}
+body main .weather .tempToday {
+  grid-area: 2/1/3/2;
+  font-size: 7vw;
+  margin-top: 5%;
+  margin-left: 10%;
+  padding-right: 25%;
+  text-align: center;
+}
+body main .weather .tempToday:hover {
+  font-size: 7.5vw;
+  transition: 0.5s;
+}
+body main .weather .tempToday .logotemp {
+  margin-top: auto;
+  margin-left: 10%;
+  width: 30%;
+  height: auto;
+}
+body main .weather .tempToday .logotemp:hover {
+  width: 33%;
+  height: auto;
+  transition: 0.5s;
+}
+body main .weather .alltemp {
+  grid-area: 1/2/3/3;
+  font-size: 6vw;
+  margin-top: 10%;
+}
+body main .weather .alltemp:hover {
+  margin-top: 5%;
+  font-size: 6.5vw;
+  transition: 0.5s;
+}
+body main .weather:hover {
+  opacity: 1;
+  margin: 2%;
+  transition: 0.8s;
+}
+
+@media screen and (min-width: 1024px) {
+  body header #logo {
+    grid-area: 1/1/2/2;
+    align-items: center;
+    width: 30%;
+    height: auto;
+  }
+  body header h1 {
+    text-align: center;
+    grid-area: 1/2/2/3;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 5vw;
+    text-decoration: none;
+    position: relative;
+  }
+  body header h1:hover {
+    color: #000;
+    font-size: 5.5vw;
+    transition: 0.5s ease;
+  }
+  body header h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1vw;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+  body header h1:hover::before {
+    transform: scaleX(1);
+  }
+  body header #add {
+    grid-area: 1/3/2/4;
+    background: none;
+    border: none;
+  }
+  body header #add #cross {
+    width: 7vw;
+    height: auto;
+    border-radius: 50%;
+  }
+  body header #add #cross:hover {
+    width: 7.5vw;
+    height: auto;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  body header #add #cross:active {
+    background-color: #467e77;
+  }
+  body main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 3fr;
+  }
+  body main #chooseCity {
+    width: 30vw;
+    height: 3vw;
+    font-size: 2vw;
+    grid-area: 1/1/2/3;
+  }
+  body main .weather .delete {
+    width: 4vw;
+    height: 4vw;
+  }
+  body main .weather .delete:hover {
+    width: 5vw;
+    height: 5vw;
+    transition: 0.2s;
+    background-color: #BBC6C8;
+    cursor: pointer;
+  }
+  body main .weather .delete .imgDelete {
+    width: 2vw;
+    height: 2vw;
+  }
+  body main .weather h2 {
+    grid-area: 1/1/2/2;
+    font-size: 3vw;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: -10%;
+  }
+  body main .weather h2:hover {
+    font-size: 3.5vw;
+    transition: 0.5s;
+  }
+  body main .weather .tempToday {
+    grid-area: 2/1/3/2;
+    font-size: 2.5vw;
+    margin-top: 5%;
+    margin-left: 10%;
+    padding-right: 25%;
+    text-align: center;
+  }
+  body main .weather .tempToday:hover {
+    font-size: 3vw;
+    transition: 0.5s;
+  }
+  body main .weather .tempToday .logotemp {
+    margin-top: auto;
+    margin-left: 10%;
+    width: 30%;
+    height: auto;
+  }
+  body main .weather .tempToday .logotemp:hover {
+    width: 33%;
+    height: auto;
+    transition: 0.5s;
+  }
+  body main .weather .alltemp {
+    grid-area: 1/2/3/3;
+    font-size: 2vw;
+    margin-top: 10%;
+  }
+  body main .weather .alltemp:hover {
+    margin-top: 5%;
+    font-size: 2.5vw;
+    transition: 0.5s;
+  }
+  body main .weather:hover {
+    opacity: 1;
+    margin: 2%;
+    transition: 0.8s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body header #logo {
+    grid-area: 1/1/2/2;
+    align-items: center;
+    width: 20%;
+    height: auto;
+    margin-left: 20%;
+  }
+  body header h1 {
+    text-align: center;
+    grid-area: 1/2/2/3;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4vw;
+    text-decoration: none;
+    position: relative;
+  }
+  body header h1:hover {
+    color: #000;
+    font-size: 4.5vw;
+    transition: 0.5s ease;
+  }
+  body header h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0.5vw;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+  body header h1:hover::before {
+    transform: scaleX(1);
+  }
+  body header #add {
+    grid-area: 1/3/2/4;
+    background: none;
+    border: none;
+  }
+  body header #add #cross {
+    width: 4vw;
+    height: auto;
+    border-radius: 50%;
+  }
+  body header #add #cross:hover {
+    width: 4.5vw;
+    height: auto;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  body header #add #cross:active {
+    background-color: #467e77;
+  }
+  body main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 3fr;
+  }
+  body main #chooseCity {
+    grid-area: 1/1/2/4;
+    width: 25vw;
+    height: 2vw;
+    font-size: 1.5vw;
+  }
+  body main .weather .delete {
+    width: 4vw;
+    height: 4vw;
+  }
+  body main .weather .delete:hover {
+    width: 5vw;
+    height: 5vw;
+    transition: 0.2s;
+    background-color: #BBC6C8;
+    cursor: pointer;
+  }
+  body main .weather .delete .imgDelete {
+    width: 2vw;
+    height: 2vw;
+  }
+  body main .weather h2 {
+    grid-area: 1/1/2/2;
+    font-size: 3vw;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: -10%;
+  }
+  body main .weather h2:hover {
+    font-size: 3.5vw;
+    transition: 0.5s;
+  }
+  body main .weather .tempToday {
+    grid-area: 2/1/3/2;
+    font-size: 2.3vw;
+    margin-top: 5%;
+    margin-left: 10%;
+    padding-right: 25%;
+    text-align: center;
+  }
+  body main .weather .tempToday:hover {
+    font-size: 2.5vw;
+    transition: 0.5s;
+  }
+  body main .weather .tempToday .logotemp {
+    margin-top: auto;
+    margin-left: 10%;
+    width: 30%;
+    height: auto;
+  }
+  body main .weather .tempToday .logotemp:hover {
+    width: 33%;
+    height: auto;
+    transition: 0.5s;
+  }
+  body main .weather .alltemp {
+    grid-area: 1/2/3/3;
+    font-size: 1.8vw;
+    margin-top: 10%;
+  }
+  body main .weather .alltemp:hover {
+    margin-top: 5%;
+    font-size: 2vw;
+    transition: 0.5s;
+  }
+  body main .weather:hover {
+    opacity: 1;
+    margin: 2%;
+    transition: 0.8s;
+  }
+}/*# sourceMappingURL=style.css.map */
