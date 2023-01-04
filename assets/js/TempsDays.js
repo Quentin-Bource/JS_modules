@@ -1,4 +1,5 @@
-export function TempsDays(date, newDay1, newDay2, newDay3, newDay4, newDay5) {
+
+export function TempsDays(date, newDay1, newDay2, newDay3, newDay4, newDay5,allTimes) {
     for (let elem of allTimes) {
         let newDate = new Date(elem.dt_txt);
         let jourSem = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];

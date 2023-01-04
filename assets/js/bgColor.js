@@ -1,4 +1,4 @@
-export function bgcolor(newTemp) {
+export function bgcolor(newTemp, allTimes) {
     let bgColor = document.getElementsByClassName('weather');
     let logoTemp = document.createElement('img');
     logoTemp.classList.add('logotemp');

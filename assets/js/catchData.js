@@ -1,7 +1,12 @@
-import 
+import{bgcolor} from "./bgColor.js"
+import { TempsDays } from "./TempsDays.js";
+
 
 export async function catchData()
 {
+    let allTimes = [];
+    // let stock;
+    
     //récuperer l'input
     let input = document.getElementById('chooseCity');
     let inputValue = input.value;
@@ -9,15 +14,15 @@ export async function catchData()
     let city = inputValue
 
 
-    let tmp = JSON.parse(localStorage.getItem("response"));
-    // const response = await fetch(
-    //     `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=d6972f200ed637ee7fd868fe68f3bf7e&units=metric`,
-    //  {
-    //       method: 'GET'
-    //   }
-    //  );
-    // let stock = await response.json();
-    stock = tmp;
+    // let tmp = JSON.parse(localStorage.getItem("response"));
+    const response = await fetch(
+        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=d6972f200ed637ee7fd868fe68f3bf7e&units=metric`,
+     {
+          method: 'GET'
+      }
+     );
+    let stock = await response.json();
+    // stock = tmp;
     console.log(stock);
     localStorage.setItem('response', JSON.stringify(stock));
     allTimes = stock.list;
@@ -95,9 +100,9 @@ export async function catchData()
 
   
 
-   TempsDays(date, newDay1, newDay2, newDay3, newDay4, newDay5);
+   TempsDays(date, newDay1, newDay2, newDay3, newDay4, newDay5, allTimes);
    
-   bgcolor(newTemp);
+   bgcolor(newTemp, allTimes);
 
 }
     

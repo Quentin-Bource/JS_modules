@@ -15,6 +15,5 @@ export function del () {
 
 
     setTimeout(del , 500)
+    
 }
-
-document.addEventListener("load" , del)

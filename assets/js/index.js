@@ -1,12 +1,25 @@
-let stock;
-let allTimes = [];
+import { catchData } from "./catchData.js";
+import { del } from "./del.js";
+import { vis } from "./vis.js";
+
+
+catchData()
+del ()
+vis()
+
+document.getElementById('chooseCity').addEventListener('keydown',function (e){
+    if (e.key == "Enter")  
+    catchData()}) ;
+
+ document.addEventListener("load" , del);
+ document.getElementById('add').addEventListener('click' , vis);
 
 
 
 
 
-
-
+// let stock;
+// let allTimes = [];
 
 // async function catchData()
 // {
@@ -130,7 +143,7 @@ let allTimes = [];
 
 
 
-//Background color a la création
+// //Background color a la création
 
 // function bgcolor(newTemp) {
 //     let bgColor = document.getElementsByClassName('weather');
