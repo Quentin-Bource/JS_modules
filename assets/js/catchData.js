@@ -1,3 +1,5 @@
+import 
+
 export async function catchData()
 {
     //récuperer l'input
